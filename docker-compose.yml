@@ -1,0 +1,13 @@
+services:
+  web:
+    build: ./mealList
+    image: phufarpsw/mealList_frontend:lastest
+    ports:
+      - "4000:4000"
+    container_name: frontend
+  server:
+    build: ./backend
+    image: phufa/mealList_backend:lastest
+    ports:
+      - "3000:3000"
+    container_name: backend
