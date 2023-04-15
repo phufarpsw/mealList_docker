@@ -16,8 +16,8 @@ pipeline{
                  withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PWD', usernameVariable: 'DOCKER_USER')]) {
                     echo "pulling new image"
                     sh 'docker login -u ${DOCKER_USER} -p ${DOCKER_PWD}'
-                    sh 'docker pull phufarpsw/mealList_backend:lastest'
-                    sh 'docker pull phufarpsw/mealList_frontend:lastest'
+                    sh 'docker pull phufarpsw/meallist_backend:lastest'
+                    sh 'docker pull phufarpsw/meallist_frontend:lastest'
                 }
                
             }
@@ -25,8 +25,8 @@ pipeline{
         stage("work"){
             steps{
                 echo "running image"
-                sh 'docker run -d --name backend -p 3000:3000 phufarpsw/mealList_backend:lastest'
-                sh 'docker run -d --name frontend -p 4000:4000 phufarpsw/mealList_frontend:lastest'
+                sh 'docker run -d --name backend -p 3000:3000 phufarpsw/meallist_backend:lastest'
+                sh 'docker run -d --name frontend -p 4000:4000 phufarpsw/meallist_frontend:lastest'
             }
         }
     }
