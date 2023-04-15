@@ -1,0 +1,44 @@
+*{
+    color: white;
+}
+@font-face {
+    font-family: Kanit;
+    src: url(../fonts/Kanit-Regular.ttf);
+}
+@font-face {
+    font-family: Leckerli;
+    src: url(../fonts/LeckerliOne-Regular.ttf);
+}
+#homepage,
+#loginpage,
+#recipeDetail,
+#signuppage{
+    background-image: url(../assets/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    /* background-position-y: -50rem; */
+}
+.container-box{
+    width: 90%;
+    /* height: 50rem; */
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid gray;
+}
+.shadow-box{
+    box-shadow: rgba(255, 255, 255, 0.702) 0px 7px 29px 5px !important;
+}
+.font-kanit{
+    font-family: Kanit;
+}
+.font-leckerli{
+    font-family: Leckerli;
+}
+.img-brand{
+    width: 50%;
+}
+.img-topview{
+    width: 30%;
+}
