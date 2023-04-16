@@ -24,6 +24,7 @@ router.get("/recipes/:recipeId", async function(req, res, next){
   }
 })
 router.post("/signup", async function (req, res, next) {
+  console.log(req.body)
   try {
     const conn = await pool.getConnection();
     await conn.beginTransaction();
@@ -34,7 +35,7 @@ router.post("/signup", async function (req, res, next) {
     await conn.commit();
     res.json("Account has been added");
   } catch (err) {
-    await conn.rollback();
+    // await conn.rollback();
     next(err);
   }
 });

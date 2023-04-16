@@ -2,16 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../css/style.css";
+import path from "../../path";
 
 export default function RenderLogin() {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   function submit(){
     axios
-    .post("http://localhost:3000/signin/", {username: username, password: password})
+    .post(`${path}/signin/`, {username: username, password: password})
     .then((result) => {
         if(result.data.length != 0){
-            window.location.href = "http://localhost:5173/"
+            window.location.href = "/"
             localStorage.setItem("user", JSON.stringify(result.data[0]))
         }
     });

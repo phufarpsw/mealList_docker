@@ -6,6 +6,7 @@ import level from "../assets/icon/icons8-boost-64.png";
 import time from "../assets/icon/icons8-time-100.png";
 import cook from "../assets/icon/icons8-cook-64.png";
 import "../css/style.css";
+import path from "../../path";
 export default function RecipeDetail(props) {
   let params = useParams();
   const [recipe, setRecipe] = useState();
@@ -13,7 +14,7 @@ export default function RecipeDetail(props) {
   const [method, setMethod] = useState();
   useEffect(() => {
     axios
-      .get("http://localhost:3000/recipes/" + params.recipeId)
+      .get(`${path}/recipes/` + params.recipeId)
       .then((result) => {
         const { data } = result;
         setRecipe(data[0]);
