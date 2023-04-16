@@ -7,7 +7,7 @@ services:
     container_name: frontend
   server:
     build: ./backend
-    image: phufa/meallist_backend:lastest
+    image: phufarpsw/meallist_backend:lastest
     ports:
       - "3000:3000"
     container_name: backend
