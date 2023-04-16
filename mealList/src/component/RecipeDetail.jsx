@@ -42,15 +42,15 @@ export default function RecipeDetail(props) {
               <div className=" flex justify-center items-center space-x-4 p-4 bg-neutral-900 rounded-xl">
                 <img src={kcal} className="w-14" alt="" />
                 <div className="flex flex-col items-center">
-                  <p className="text-lg">{recipe.Kcal} Calories</p>
-                  <p className="text-sm text-gray-200">Energy</p>
+                  <p className="text-xl">Energy</p>
+                  <p className="text-neutral-300">{recipe.Kcal} Calories</p>
                 </div>
               </div>
               <div className="w-48 flex justify-center items-center space-x-4 p-4 bg-neutral-900 rounded-xl">
                 <img src={level} className="h-12" alt="" />
                 <div className="flex flex-col items-center">
-                  <p className="text-2xl">Level</p>
-                  <p className="capitalize">{recipe.level}</p>
+                  <p className="text-2xl">Difficulty</p>
+                  <p className="capitalize text-neutral-300">{recipe.level} - Level</p>
                 </div>
               </div>
               <div className="flex justify-center items-center space-x-4 p-4 bg-neutral-900 rounded-xl">
