@@ -20,6 +20,11 @@ function RenderHomepage() {
       });
   }, []);
   const [search, setSearch] = useState("");
+  const login = (
+    <button className="btn-login px-6 py-2 rounded-full border border-l-slate-50 select-none">
+      Login
+    </button>
+  )
   return (
     <div
       id="homepage"
@@ -30,11 +35,9 @@ function RenderHomepage() {
           <div className="logo-page">
             <p className="text-3xl font-leckerli">MealList</p>
           </div>
-          <Link to="/signin">
-            <button className="btn-login px-6 py-2 rounded-full border border-l-slate-50 select-none">
-              Login
-            </button>
-          </Link>
+            {user ?
+             <p className="font-kanit text-lg">{user.firstname}&nbsp;&nbsp;{user.lastname}</p> 
+            : <Link to="/signin">{login}</Link>}
         </nav>
         <div id="header" className="w-full flex justify-between">
           <div className="w-1/2 flex flex-col justify-center space-y-4">

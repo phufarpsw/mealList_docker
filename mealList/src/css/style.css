@@ -20,6 +20,14 @@
     padding-bottom: 3rem;
     /* background-position-y: -50rem; */
 }
+.container-boxx{
+    width: 90%;
+    /* height: 50rem; */
+    background-color: rgba(0, 0, 0, 0.452);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid gray;
+}
 .container-box{
     width: 90%;
     /* height: 50rem; */
