@@ -81,10 +81,10 @@ export default function RecipeDetail(props) {
             </div>
             <div className="method space-y-4 w-7/12">
               <p className="text-3xl font-kanit text-rose-500 mt-5">Method</p>
-              <div className="">
+              <div className="space-y-4">
                 {method &&
                   method.map((res, index) => {
-                    return <p key={index} className="mt-2">{index+1}. {res}</p>;
+                    return <p key={index} className="mt-1 leading-7">{index+1}. {res}</p>;
                   })}
               </div>
             </div>
@@ -92,8 +92,18 @@ export default function RecipeDetail(props) {
               <p className="text-3xl text-rose-500">Review</p>
               <p className=" text-gray-200">( 2 comments )</p>
               <div className="w-full h-24 rounded-lg p-4 border flex flex-col justify-center mt-5">
-                <p id="name" className="text-rose-500 text-xl">Tiwat.rap</p>
-                <p>Lovely food. 100% recommed<br />The customer service was great :D </p>
+                <div className="flex justify-between">
+                <p id="name" className="text-yellow-500 text-xl">Jean Tiwat</p>
+                <p className=" text-neutral-400">yesterday 20:15</p>
+                </div>
+                <p>Lovely food. 100% recommed, The customer service was great :D </p>
+              </div>
+              <div className="w-full h-24 rounded-lg p-4 border flex flex-col justify-center mt-5">
+                <div className="flex justify-between">
+                <p id="name" className="text-yellow-500 text-xl">Mind Tanavich</p>
+                <p className=" text-neutral-400">yesterday 20:15</p>
+                </div>
+                <p>I was very happy with the food, This Food is amazing !</p>
               </div>
             </section>
           </div>
