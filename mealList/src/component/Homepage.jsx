@@ -28,7 +28,7 @@ function RenderHomepage() {
     const [like, setLike] = useState(false);
     return (
       <button onClick={() => setLike(!like)}>
-        {(like ? <img className="h-8" src={bookmark1} alt="" /> : <img className="h-8" src={bookmark} alt="" />)}
+        {(like ? <img className="object-cover w-8 h-8" src={bookmark1} alt="" /> : <img className="object-cover w-8 h-8" src={bookmark} alt="" />)}
       </button>
     )
   }
@@ -116,7 +116,7 @@ Overall, the Meallist app is a useful tool for anyone who wants to create a menu
                         </div>
                         <div className="flex items-center space-x-2">
                           <Link to={"/recipeDetail/" + food.id} className="flex justify-center items-center">
-                            <button className="btn-project w-36 py-2 text-center rounded-full border border-rose-500 hover:bg-rose-600 hover:duration-150 transition ease-in-out">
+                            <button className="btn-project w-32 py-2 text-center rounded-full border border-rose-500 hover:bg-rose-600 hover:duration-150 transition ease-in-out">
                               Food Detail
                             </button>
                           </Link>

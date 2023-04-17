@@ -69,39 +69,39 @@ export default function RecipeDetail(props) {
               </div>
             </div>
             <div id="ingredient" className="space-y-4">
-              <p className="text-3xl font-kanit text-rose-500 mt-5">Ingredients</p>
+              <p className="text-3xl font-kanit font-bold text-rose-500 mt-5">Ingredients</p>
               <div className="w-full ">
                 <ul className="list-disc grid grid-cols-3 gap-y-2 pl-7">
                   {ingredient &&
                     ingredient.map((res, index) => {
-                      return <li key={index} className="mt-2">{res}</li>;
+                      return <li key={index} className="font-kanit text-lg mt-2">{res}</li>;
                     })}
                 </ul>
               </div>
             </div>
             <div className="method space-y-4 w-7/12">
-              <p className="text-3xl font-kanit text-rose-500 mt-5">Method</p>
+              <p className="text-3xl font-bold text-rose-500 mt-5">Method</p>
               <div className="space-y-4">
                 {method &&
                   method.map((res, index) => {
-                    return <p key={index} className="mt-1 leading-7">{index+1}. {res}</p>;
+                    return <p key={index} className="mt-1 font-kanit text-lg leading-7">{index+1}. {res}</p>;
                   })}
               </div>
             </div>
             <section className="comment">
-              <p className="text-3xl text-rose-500">Review</p>
+              <p className="text-3xl font-bold text-rose-500">Review</p>
               <p className=" text-gray-200">( 2 comments )</p>
               <div className="w-full h-24 rounded-lg p-4 border flex flex-col justify-center mt-5">
                 <div className="flex justify-between">
-                <p id="name" className="text-yellow-500 text-xl">Jean Tiwat</p>
+                <p id="name" className="text-yellow-500 text-lg">Jean Tiwat</p>
                 <p className=" text-neutral-400">yesterday 20:15</p>
                 </div>
                 <p>Lovely food. 100% recommed, The customer service was great :D </p>
               </div>
               <div className="w-full h-24 rounded-lg p-4 border flex flex-col justify-center mt-5">
                 <div className="flex justify-between">
-                <p id="name" className="text-yellow-500 text-xl">Mind Tanavich</p>
-                <p className=" text-neutral-400">yesterday 20:15</p>
+                <p id="name" className="text-yellow-500 text-lg">Mind Tanavich</p>
+                <p className=" text-neutral-400">yesterday 14:15</p>
                 </div>
                 <p>I was very happy with the food, This Food is amazing !</p>
               </div>
