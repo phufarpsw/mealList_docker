@@ -59,8 +59,8 @@ function RenderHomepage() {
               cooking a delicious food easily
             </p>
             <p className="text-stone-500 w-10/12">
-            meallist is an app that allows users to search for food items. Along with the ingredients and how to do it comfortably. Users can choose food according to the type and difficulty of the food.<br/><br/>
-Overall, the Meallist app is a useful tool for anyone who wants to create a menu and want to learn about the ingredients of a meal accurately and completely.
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meallist is an web application that allows users to search for food items. Along with the ingredients and how to do it comfortably. Users can choose food according to the type and difficulty of the food.<br/><br/>
+Overall, the Meallist web application is a useful tool for anyone who wants to create a menu and want to learn about the ingredients of a meal accurately and completely.
             </p>
             <div className="flex">
               <button onClick={e => {
