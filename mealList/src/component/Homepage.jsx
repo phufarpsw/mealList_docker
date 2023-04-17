@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import foodbrand from "../assets/foodBrander.png";
 import bookmark from "../assets/icon/icons8-bookmark-240.png";
+import bookmark1 from "../assets/icon/icons8-bookmark-240-active.png"
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "../css/style.css";
@@ -23,10 +24,18 @@ function RenderHomepage() {
       Login
     </button>
   );
+  function Bookmark(){
+    const [like, setLike] = useState(false);
+    return (
+      <button onClick={() => setLike(!like)}>
+        {(like ? <img className="h-8" src={bookmark1} alt="" /> : <img className="h-8" src={bookmark} alt="" />)}
+      </button>
+    )
+  }
   return (
     <div
       id="homepage"
-      className="w-full relative min-h-screen flex justify-center"
+      className="w-full relative min-h-screen flex justify-center scroll-smooth transition-all"
     >
       <div className="container-box pt-10 px-24 space-y-4">
         <nav className="w-full flex items-center justify-between">
@@ -49,14 +58,18 @@ function RenderHomepage() {
             <p className="text-6xl capitalize font-kanit leading-tight ">
               cooking a delicious food easily
             </p>
-            <p className="text-stone-500 ">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus
-              nisi illum, necessitatibus fuga iure accusantium officiis
-              laboriosam possimus non pariatur nobis ut corporis tempore
-              consequuntur distinctio fugit incidunt dolorem eos!
+            <p className="text-stone-500 w-10/12">
+            meallist is an app that allows users to search for food items. Along with the ingredients and how to do it comfortably. Users can choose food according to the type and difficulty of the food.<br/><br/>
+Overall, the Meallist app is a useful tool for anyone who wants to create a menu and want to learn about the ingredients of a meal accurately and completely.
             </p>
             <div className="flex">
-              <button className="btn-project w-36 px-4 py-3 text-center rounded-full mt-4 bg-rose-600 cursor-default">
+              <button onClick={e => {
+                  let recipemenu = document.getElementById("content");
+                  e.preventDefault();  // Stop Page Reloading
+                  recipemenu && recipemenu.scrollIntoView({
+                    behavior:"smooth",block:"start"
+                  });
+                  }} className="btn-project w-36 px-4 py-3 text-center rounded-full mt-4 bg-rose-600">
                 Getting Started
               </button>
             </div>
@@ -101,15 +114,13 @@ function RenderHomepage() {
                             Premium recipe
                           </p>
                         </div>
-                        <div className="flex justify-center items-center">
+                        <div className="flex items-center space-x-2">
                           <Link to={"/recipeDetail/" + food.id} className="flex justify-center items-center">
-                            <button className="btn-project w-36 py-2 text-center rounded-full border border-rose-500 mt-8 hover:bg-rose-600 hover:duration-150 transition ease-in-out">
+                            <button className="btn-project w-36 py-2 text-center rounded-full border border-rose-500 hover:bg-rose-600 hover:duration-150 transition ease-in-out">
                               Food Detail
                             </button>
                           </Link>
-                          <div className="flex justify-center items-center bg-red-200">
-                            <img className="w-12 h-8" src={bookmark} alt="" />
-                          </div>
+                          {<Bookmark/>}
                         </div>
                       </div>
                     </div>
